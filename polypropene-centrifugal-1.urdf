@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot name="polystyrene-tube-centrifugal">
+
+  <link name="polypropene-base">
+    <visual>
+      <geometry>
+        <mesh filename="C:\Users\jbuam\OneDrive\Documents\University\MECHANICAL ENGINEERING\Final year\Final Year Project (MEng)\components\test tubes\polypropene-centrifugal-base-1.obj" scale="0.1 0.1 0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="C:\Users\jbuam\OneDrive\Documents\University\MECHANICAL ENGINEERING\Final year\Final Year Project (MEng)\components\test tubes\polypropene-centrifugal-base-1.obj" scale="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.4"/>
+      <inertia ixx="0.1" iyy="0.1" izz="0.1" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <link name="polypropene-cap">
+    <visual>
+      <geometry>
+        <mesh filename="C:\Users\jbuam\OneDrive\Documents\University\MECHANICAL ENGINEERING\Final year\Final Year Project (MEng)\components\test tubes\red-cap.obj" scale="0.1 0.1 0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="C:\Users\jbuam\OneDrive\Documents\University\MECHANICAL ENGINEERING\Final year\Final Year Project (MEng)\components\test tubes\red-cap.obj" scale="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+<!--
+  <joint name="base_to_cap" type="fixed">
+    <parent link="polypropene-base"/>
+    <child link="polypropene-cap"/>
+    <origin xyz="0 0 0.50" rpy="0 0 0"/>
+  </joint>
+  -->
+  <joint name="base_to_cap" type="revolute">
+    <parent link="polypropene-base"/>
+    <child link="polypropene-cap"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-31.4" upper="31.4" effort="10" velocity="5"/>
+    <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+
+</robot>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="air_jet">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/jbuam/OneDrive/Documents/University/MECHANICAL ENGINEERING/Final year/Final Year Project (MEng)/components/conveyor belt/air jet.obj" scale="0.05 0.05 0.05"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="C:/Users/jbuam/OneDrive/Documents/University/MECHANICAL ENGINEERING/Final year/Final Year Project (MEng)/components/conveyor belt/air jet.obj" scale="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+</robot>
