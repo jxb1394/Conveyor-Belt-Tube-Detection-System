@@ -249,37 +249,6 @@ class ConveyorSortingEnv(gym.Env):
         final_obs = [y_norm, type_norm]
         return np.array(final_obs, dtype=np.float32)
     
-###############################################################################################################################################################
-def plot_policy_heatmap(model):
-    y_vals = np.linspace(-1, 1, 100)
-    type_vals = np.linspace(-1, 1, 100)
-
-    action_grid = np.zeros((len(type_vals), len(y_vals)))
-
-    for i, t in enumerate(type_vals):
-        for j, y in enumerate(y_vals):
-            obs = np.array([y, t], dtype=np.float32)
-            action, _ = model.predict(obs, deterministic=True)
-            action_grid[i, j] = action
-
-    cmap = ListedColormap(["red", "blue", "green", "purple", "orange", "black"])
-
-    plt.figure(figsize=(8, 6))
-    plt.imshow(
-        action_grid,
-        extent=[-1, 1, -1, 1],
-        origin='lower',
-        aspect='auto',
-        cmap=cmap,
-        vmin=0,
-        vmax=5
-    )
-    plt.colorbar(label="Action (Jet Index)")
-    plt.xlabel("Tube Y Position (normalized)")
-    plt.ylabel("Tube Type (normalized)")
-    plt.title("PPO Policy Heatmap (State → Action)")
-    plt.show()
-
 
 if __name__ == "__main__":
     env = ConveyorSortingEnv(render=False)
@@ -287,4 +256,3 @@ if __name__ == "__main__":
     model = PPO("MlpPolicy", env, learning_rate=3e-4, gamma=0.99, verbose=1, n_steps=2048, tensorboard_log="./ppo_sorting_logs/")
     model.learn(total_timesteps=200000)
     model.save("ppo_sorting_policy_v2")
-    plot_policy_heatmap(model)
