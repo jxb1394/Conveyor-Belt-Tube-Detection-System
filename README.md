@@ -33,29 +33,7 @@ The system autonomously:
 
 ## Project Pipeline
 
-```text
-Medical Tube Detection
-        ↓
-YOLO Object Localisation
-        ↓
-Coordinate Transformation
-(Camera → Cartesian → Conveyor Space)
-        ↓
-State Observation Vector
-[y, w, h, θ, class]
-        ↓
-RL Controller (PPO / SAC)
-        ↓
-Pneumatic Air Jet Actuation
-        ↓
-Segregation Funnel
-        ↓
-Intermediate Conveyor
-        ↓
-UR5 Robotic Disassembly
-        ↓
-Recycling / Sterilisation
-```
+![Medical Tube Segregation and Disassembly Pipeline](./assets/figure1.png)
 
 ---
 
