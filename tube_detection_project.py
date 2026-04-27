@@ -27,13 +27,15 @@ def main_menu():
             subprocess.run(
                 "yolo task=detect mode=train model=yolov8n.pt data=data.yaml epochs=30 imgsz=320 batch=8 workers=0", 
                 env=env, 
-                shell=True)
+                shell=True
+                [sys.executable, "object_detection.py"]    
+            )
             #os.system("set KMP_DUPLICATE_LIB_OK=TRUE && yolo task=detect mode=train model=yolov8n.pt data=data.yaml epochs=50 imgsz=640 batch=16 workers=0")
         elif choice == '3':
-            subprocess.run([sys.executable, "test_.py"])
+            subprocess.run([sys.executable, "sample_test.py"])
         elif choice == '4':
             print("\nStarting RL Training Loop...")
-            subprocess.run([sys.executable, "rl_training_ppo_dupe_2.py"])
+            subprocess.run([sys.executable, "rl_training_ppo.py"])
         elif choice == '5':
             print("\nStarting RL Training Loop...")
             subprocess.run([sys.executable, "rl_trainin_sac.py"])
