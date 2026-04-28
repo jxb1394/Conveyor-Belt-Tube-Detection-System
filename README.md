@@ -33,7 +33,7 @@ The system autonomously:
 
 ## Project Pipeline
 
-![Medical Tube Segregation and Disassembly Pipeline](./assets/figure1.png)
+![Medical Tube Segregation and Disassembly Pipeline](./assets/figure2.png)
 
 ---
 
