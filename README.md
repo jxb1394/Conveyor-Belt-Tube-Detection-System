@@ -6,7 +6,7 @@
 ![RL](https://img.shields.io/badge/Reinforcement%20Learning-PPO%20%7C%20SAC-green)
 ![Simulation](https://img.shields.io/badge/Simulation-PyBullet-orange)
 ![Vision](https://img.shields.io/badge/Computer%20Vision-YOLOv8-red)
-![Robotics](https://img.shields.io/badge/Robot-UR5%20%2B%20Robotiq-lightgrey)
+![Robotics](https://img.shields.io/badge/Robot-UR5%20%2B%20Robotiq85-lightgrey)
 
 ---
 
