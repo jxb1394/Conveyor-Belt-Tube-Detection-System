@@ -17,20 +17,20 @@ class ConveyorSortingEnv(gym.Env):
     def __init__(self, render=False, use_robot=False):
         super(ConveyorSortingEnv, self).__init__()
         self.TUBE_URDF_PATHS = [
-            r"C:\Users\jbuam\OneDrive\Documents\University\MECHANICAL ENGINEERING\Final year\Final Year Project (MEng)\polypropene-tube-1.urdf",
-            r"C:\Users\jbuam\OneDrive\Documents\University\MECHANICAL ENGINEERING\Final year\Final Year Project (MEng)\polypropene-tube-2.urdf",
-            r"C:\Users\jbuam\OneDrive\Documents\University\MECHANICAL ENGINEERING\Final year\Final Year Project (MEng)\polypropene-centrifugal-1.urdf",
-            r"C:\Users\jbuam\OneDrive\Documents\University\MECHANICAL ENGINEERING\Final year\Final Year Project (MEng)\polypropene-centrifugal-2.urdf",
-            r"C:\Users\jbuam\OneDrive\Documents\University\MECHANICAL ENGINEERING\Final year\Final Year Project (MEng)\lysis-tube-1.urdf"
+            r".\urdfs\polypropene-tube-1.urdf",
+            r".\urdfs\polypropene-tube-2.urdf",
+            r".\urdfs\polypropene-centrifugal-1.urdf",
+            r".\urdfs\polypropene-centrifugal-2.urdf",
+            r".\urdfs\lysis-tube-1.urdf"
         ]
-        self.CONVEYOR_1_URDF = r"C:/Users/jbuam/OneDrive/Documents/University/MECHANICAL ENGINEERING/Final year/Final Year Project (MEng)/conveyor_belt_draft.urdf"
-        self.CONVEYOR_2_URDF = r"C:/Users/jbuam/OneDrive/Documents/University/MECHANICAL ENGINEERING/Final year/Final Year Project (MEng)/conveyor_belt_with_hopper.urdf"
-        self.CONVEYOR_3_URDF = r"C:/Users/jbuam/OneDrive/Documents/University/MECHANICAL ENGINEERING/Final year/Final Year Project (MEng)/conveyor_belt_shortened.urdf"
-        self.CONVEYOR_4_URDF = r"C:/Users/jbuam/OneDrive/Documents/University/MECHANICAL ENGINEERING/Final year/Final Year Project (MEng)/conveyor_belt_project_2.urdf"
-        self.AIR_JET_URDF = r"C:/Users/jbuam/OneDrive/Documents/University/MECHANICAL ENGINEERING/Final year/Final Year Project (MEng)/air_jet.urdf"
-        self.BIN_URDF = "C:/Users/jbuam/OneDrive/Documents/University/MECHANICAL ENGINEERING/Final year/Final Year Project (MEng)/bin.urdf"
-        self.BIN_FUNNEL_URDF = "C:/Users/jbuam/OneDrive/Documents/University/MECHANICAL ENGINEERING/Final year/Final Year Project (MEng)/bin_funnel.urdf"
-        self.ur5_path = "./urdf/ur5_robotiq_85.urdf"
+        self.CONVEYOR_1_URDF = r".\urdfs\conveyor_belt_draft.urdf"
+        self.CONVEYOR_2_URDF = r".\urdfs\conveyor_belt_with_hopper.urdf"
+        self.CONVEYOR_3_URDF = r".\urdfs\conveyor_belt_shortened.urdf"
+        self.CONVEYOR_4_URDF = r".\urdfs\conveyor_belt_project_2.urdf"
+        self.AIR_JET_URDF = r".\urdfs\air_jet.urdf"
+        self.BIN_URDF = ".\urdfs\bin.urdf"
+        self.BIN_FUNNEL_URDF = ".\urdfs\bin_funnel.urdf"
+        self.ur5_path = "./urdfs/ur5_robotiq_85.urdf"
         
         self.jet_positions = [2.8*i-5.5 for i in range(5)]
         self.action_space = spaces.Discrete(6)
