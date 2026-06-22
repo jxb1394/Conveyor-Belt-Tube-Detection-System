@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="funnel_scaled">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="C:\Users\jbuam\OneDrive\Documents\University\MECHANICAL ENGINEERING\Final year\Final Year Project (MEng)\components\conveyor belt\bin funnel.obj" scale="0.1 0.1 0.1"/>
+      </geometry>
+    </visual>
+<!--
+    <collision>
+      <geometry>
+        <mesh filename="C:\Users\jbuam\OneDrive\Documents\University\MECHANICAL ENGINEERING\Final year\Final Year Project (MEng)\components\conveyor belt\bin funnel.obj" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+-->	
+  </link>
+</robot>
