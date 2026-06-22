@@ -27,9 +27,7 @@ def main_menu():
             subprocess.run(
                 "yolo task=detect mode=train model=yolov8n.pt data=data.yaml epochs=30 imgsz=320 batch=8 workers=0", 
                 env=env, 
-                shell=True
-                [sys.executable, "object_detection.py"]    
-            )
+                shell=True)
             #os.system("set KMP_DUPLICATE_LIB_OK=TRUE && yolo task=detect mode=train model=yolov8n.pt data=data.yaml epochs=50 imgsz=640 batch=16 workers=0")
         elif choice == '3':
             subprocess.run([sys.executable, "sample_test.py"])
